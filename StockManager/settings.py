@@ -128,3 +128,6 @@ CORS_ORIGIN_ALLOW_ALL = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#STATICFILES_DIRS = ( os.path.join(PROJECT_DIR,'static/'),)
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

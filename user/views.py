@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
 from django.http import HttpResponse
+from django.conf import settings
 # from rest_framework import status
 # from rest_framework.decorators import api_view
 # from rest_framework.response import Response
@@ -90,6 +91,8 @@ def plotit(real_stock_price, predicted_stock_price):
   plt.ylabel('Google Stock Price')
   plt.legend()
   #plt.show() # SAVE IT
+  print(settings.PROJECT_ROOT)
+  final_path = settings.PROJECT_ROOT + '/user/static/img/image.png'
   plt.savefig(final_path)
 
 
